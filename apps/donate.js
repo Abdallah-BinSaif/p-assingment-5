@@ -9,19 +9,20 @@ function getInputValueFromId (id){
     return textNumber
 }
 
-
+function grandTotalFun (input){
+    const newGrandTotal = getTextValueFromId("g-total") - input;
+    document.getElementById("g-total").innerText = newGrandTotal;
+}
 
 document.getElementById("noakhali-donate")
 .addEventListener("click", function(){
     // getting
     let total = getTextValueFromId("noakhali-total")
     const input = getInputValueFromId("noakhali-input")
-    let grandTotal = getTextValueFromId("g-total");
     // adding
     const newTotal = total + input;
-    const newGrandTotal = grandTotal - input;
     // setting
-    document.getElementById("g-total").innerText = newGrandTotal;
+    grandTotalFun(input)
     document.getElementById("noakhali-total").innerText = newTotal;
     // historing
     const now = new Date()
@@ -45,12 +46,10 @@ document.getElementById("feni-donate")
     // getting
     let total = getTextValueFromId("feni-total");
     const input = getInputValueFromId("feni-input");
-    let grandTotal = getTextValueFromId("g-total");
     // adding
     const newTotal = total + input;
-    const newGrandTotal = grandTotal - input;
     // setting
-    document.getElementById("g-total").innerText = newGrandTotal;
+    grandTotalFun(input);
     document.getElementById("feni-total").innerText = newTotal;
     // historing
     const now = new Date()
@@ -72,12 +71,10 @@ document.getElementById("quota-donate")
     // getting
     let total = getTextValueFromId("quota-total")
     const input = getInputValueFromId("quota-input")
-    let grandTotal = getTextValueFromId("g-total");
     // adding
     const newTotal = total + input;
-    const newGrandTotal = grandTotal - input;
     // setting
-    document.getElementById("g-total").innerText = newGrandTotal;
+    grandTotalFun(input)
     document.getElementById("quota-total").innerText = newTotal;
     // historing
     const now = new Date()
