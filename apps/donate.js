@@ -1,48 +1,32 @@
-
-
-
+// Noakhali Donation
 document.getElementById("noakhali-donate")
 .addEventListener("click", function(){
-    // getting
-    let total = getTextValueFromId("noakhali-total")
+
+    updateDonate("noakhali-total", "noakhali-input")
     const input = getInputValueFromId("noakhali-input")
-    // adding
-    const newTotal = total + input;
-    // setting
     grandTotalFun(input)
-    document.getElementById("noakhali-total").innerText = newTotal;
-    // historing
     addElement(input, "noakhali-heading");
 
-
 })
 
-
+// Feni Donation
 document.getElementById("feni-donate")
 .addEventListener("click", function(){
-    // getting
-    let total = getTextValueFromId("feni-total");
+
+    updateDonate("feni-total", "feni-input");
     const input = getInputValueFromId("feni-input");
-    // adding
-    const newTotal = total + input;
-    // setting
     grandTotalFun(input);
-    document.getElementById("feni-total").innerText = newTotal;
-    // historing
     addElement(input, "feni-heading")
+
 })
 
-
+// Quota Donation
 document.getElementById("quota-donate")
 .addEventListener("click", function(){
-    // getting
-    let total = getTextValueFromId("quota-total")
+
+    updateDonate("quota-total", "quota-input")
     const input = getInputValueFromId("quota-input")
-    // adding
-    const newTotal = total + input;
-    // setting
     grandTotalFun(input)
-    document.getElementById("quota-total").innerText = newTotal;
-    // historing
     addElement(input, "quota-heading")
+
 })

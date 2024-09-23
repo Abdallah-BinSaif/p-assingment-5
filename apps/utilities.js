@@ -29,3 +29,9 @@ function addElement (input, heading){
     `
     document.getElementById("history").innerHTML += newItem;
 }
+
+function updateDonate (total, input) {
+    const newTotal = getTextValueFromId(total) + getInputValueFromId(input);
+    document.getElementById(total).innerText = newTotal;
+
+}
