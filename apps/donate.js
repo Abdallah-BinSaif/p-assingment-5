@@ -1,18 +1,5 @@
-function getTextValueFromId (id){
-    const text = document.getElementById(id).innerText;
-    const textNumber = Number(text);
-    return textNumber
-}
-function getInputValueFromId (id){
-    const text = document.getElementById(id).value;
-    const textNumber = Number(text);
-    return textNumber
-}
 
-function grandTotalFun (input){
-    const newGrandTotal = getTextValueFromId("g-total") - input;
-    document.getElementById("g-total").innerText = newGrandTotal;
-}
+
 
 document.getElementById("noakhali-donate")
 .addEventListener("click", function(){
@@ -25,17 +12,7 @@ document.getElementById("noakhali-donate")
     grandTotalFun(input)
     document.getElementById("noakhali-total").innerText = newTotal;
     // historing
-    const now = new Date()
-    const h = document.getElementById("noakhali-heading").innerText;
-    const newItem = `
-    <div class="border-2 rounded-3xl p-8">
-          <p class="font-extrabold text-xl">
-            ${input} Taka is ${h}
-          </p>
-          <p class="text-fontcolor text-base">${now}</p>
-    </div>
-    `
-    document.getElementById("history").innerHTML += newItem;
+    addElement(input, "noakhali-heading");
 
 
 })
@@ -52,17 +29,7 @@ document.getElementById("feni-donate")
     grandTotalFun(input);
     document.getElementById("feni-total").innerText = newTotal;
     // historing
-    const now = new Date()
-    const h = document.getElementById("feni-heading").innerText;
-    const newItem = `
-    <div class="border-2 rounded-3xl p-8">
-          <p class="font-extrabold text-xl">
-            ${input} Taka is ${h}
-          </p>
-          <p class="text-fontcolor text-base">${now}</p>
-    </div>
-    `
-    document.getElementById("history").innerHTML += newItem;
+    addElement(input, "feni-heading")
 })
 
 
@@ -77,17 +44,5 @@ document.getElementById("quota-donate")
     grandTotalFun(input)
     document.getElementById("quota-total").innerText = newTotal;
     // historing
-    const now = new Date()
-    const h = document.getElementById("quota-heading").innerText;
-    const newItem = `
-    <div class="border-2 rounded-3xl p-8">
-          <p class="font-extrabold text-xl">
-            ${input} Taka is ${h}
-          </p>
-          <p class="text-fontcolor text-base">${now}</p>
-    </div>
-    `
-    document.getElementById("history").innerHTML += newItem;
-
-
+    addElement(input, "quota-heading")
 })
