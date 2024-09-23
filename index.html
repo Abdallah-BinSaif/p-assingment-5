@@ -39,7 +39,7 @@
       };
     </script>
   </head>
-  <body>
+  <body class="font-lex p-2 lg:p-0">
     <header class="sticky top-0 opacity-95 bg-white border-b-2 rounded-3xl">
       <div class="bg-navbg">
         <nav
@@ -78,18 +78,19 @@
         </button>
       </section>
     </header>
-    
+
+
     <main class="container mx-auto">
       <!-- Donation Part -->
       <div id="donation">
         <!-- section:- Noakhali donation -->
         <section
-          class="grid lg:grid-cols-2 gap-8 border-2 rounded-3xl sm:p-8 my-8"
+          class="grid lg:grid-cols-2 gap-12 border-2 rounded-3xl sm:p-8 my-8"
         >
-          <div>
-            <div><img class="w-full" src="./images/noakhali.png" alt="" /></div>
-          </div>
-          <div class="space-y-4">
+          
+          <img class="w-full" src="./images/noakhali.png" alt="" />
+          
+          <div class="space-y-8">
             <div class="btn text-fontcolor text-base font-bold">
               <img src="./images/coin.png" alt="" />
               <p>
@@ -125,12 +126,12 @@
         </section>
         <!-- section:- feni donation -->
         <section
-          class="grid lg:grid-cols-2 gap-8 border-2 rounded-3xl sm:p-8 my-8"
+          class="grid lg:grid-cols-2 gap-12 border-2 rounded-3xl sm:p-8 my-8"
         >
           <div>
             <div><img class="w-full" src="./images/feni.png" alt="" /></div>
           </div>
-          <div class="space-y-4">
+          <div class="space-y-8">
             <div class="btn text-fontcolor text-base font-bold">
               <img src="./images/coin.png" alt="" />
               <p>
@@ -162,14 +163,14 @@
         </section>
         <!-- section:- Quota donation -->
         <section
-          class="grid lg:grid-cols-2 gap-8 border-2 rounded-3xl sm:p-8 my-8"
+          class="grid lg:grid-cols-2 gap-12 border-2 rounded-3xl sm:p-8 my-8"
         >
           <div>
             <div>
               <img class="w-full" src="./images/quota-protest.png" alt="" />
             </div>
           </div>
-          <div class="space-y-4">
+          <div class="space-y-8">
             <div class="btn text-fontcolor text-base font-bold">
               <img src="./images/coin.png" alt="" />
               <p>
@@ -214,6 +215,24 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="h-28 bg-navbg mt-28"></footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./apps/toggole.js"></script>
+    <script src="./apps/donate.js"></script>
   </body>
 </html>
