@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Donate</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisy UI and Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgb(180, 244, 97)",
+              graybg: "rgba(17, 17, 17, 0.05)",
+              navbg: "rgb(249, 247, 243)",
+              fontcolor: "rgba(17, 17, 17, 0.7)",
+            },
+            fontFamily: {
+              lex: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lex p-2 lg:p-0">
+    <header class="sticky top-0 opacity-95 bg-white border-b-2 rounded-3xl">
+      <div class="bg-navbg">
+        <nav
+          class="container mx-auto flex justify-between items-center py-4 pb-14 top-1"
+        >
+          <button onclick="window.location.href='./index.html'" class="btn bg-primary px-8 font-extrabold text-base">
+            Home
+          </button>
+
+          <div class="flex items-center gap-3">
+            <img src="./images/logo.png" alt="" />
+            <h1 class="font-bold">Donate Bangladesh</h1>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <img src="./images/coin.png" alt="" />
+            <p class="font-bold">
+              <span id="g-total">15500</span>
+              <span>BDT</span>
+            </p>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto mt-16 space-y-8">
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>DOM is the structure of a website which contain nodes in tree structure</p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>There are several ways of select element from the DOM. We select element by its tag name. We also select elements by <em>'id'</em> name, <em>'class'</em> name, and by query selector. 
+            <br> such as:- 
+            <br>1. <em>getElementsByTagName</em>
+            <br>2. <em>getElementsByClassName</em>
+            <br>3. <em>getElementById</em>
+            <br>4. <em>querySelector</em>
+            <br>5. <em>querySelectorAll</em>
+        </p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it useful?
+        </div>
+        <div class="collapse-content">
+          <p>Event delegation is the way of using one Event handlar instead of using multiple event.It gives the power of event to parent rethar than child
+            <br> It is very useful when we need many event handler.
+            <br> newly added child are automatically get the event handler
+          </p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>elements can be changed by style <br>
+            > element.style.color = "red" <br>
+            > element.style.backgroundColor = "yellow" <br>
+            We change any css property like this.
+            <br>
+            <br>
+            <br>
+            We also change attributes by <em>getAttribute</em>, <em>setAttribute</em>, <em>removeAttribute</em>
+
+        </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

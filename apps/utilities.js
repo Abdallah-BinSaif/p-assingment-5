@@ -15,10 +15,9 @@ function grandTotalFun (input){
 }
 
 function addElement (input, heading){
-    console.log("inside from function")
+    
     const now = new Date();
     const h = document.getElementById(heading).innerText;
-    console.log(h)
     const newItem = `
     <div class="border-2 rounded-3xl p-8">
           <p class="font-extrabold text-xl">

@@ -45,7 +45,7 @@
         <nav
           class="container mx-auto flex justify-between items-center py-4 pb-14 top-1"
         >
-          <button class="btn bg-primary px-8 font-extrabold text-base">
+          <button onclick="window.location.href='./blog.html'" class="btn bg-primary px-8 font-extrabold text-base">
             Blog
           </button>
 
@@ -116,7 +116,6 @@
               placeholder="Write Donation Amount"
             />
             <button
-              onclick="my_modal_1.showModal()"
               id="noakhali-donate"
               class="btn bg-primary w-full pb-8 pt-6"
             >
@@ -157,8 +156,9 @@
               id="feni-input"
               placeholder="Write Donation Amount"
             />
-            <button id="feni-donate"
-            onclick="my_modal_1.showModal()" class="btn bg-primary w-full pb-8 pt-6">Donate Now</button>
+            <div>
+              <button id="feni-donate" class="btn bg-primary w-full pb-8 pt-6">Donate Now</button>
+            </div>
           </div>
         </section>
         <!-- section:- Quota donation -->
@@ -199,8 +199,7 @@
               id="quota-input"
               placeholder="Write Donation Amount"
             />
-            <button id="quota-donate"
-            onclick="my_modal_1.showModal()" class="btn bg-primary w-full pb-8 pt-6">Donate Now</button>
+            <button id="quota-donate" class="btn bg-primary w-full pb-8 pt-6">Donate Now</button>
           </div>
         </section>
       </div>
